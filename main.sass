@@ -1,0 +1,108 @@
+@import ./base/_variable
+@import ./base/_media
+@import ./base/_mixin
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;800&display=swap')
+
+
+*
+    font-family: 'Red Hat Display'
+    box-sizing: border-box  
+    margin: 0 
+    padding: 0
+    text-align: center
+    font-weight: $wg-5
+    
+body
+    min-height: 100vh
+    +mobile()
+        +picbg('mobile',cover)
+    +tablet()
+        +picbg('mobile',contain)
+    +laptop()
+        +picbg('desktop',contain)
+    +pc()
+        +picbg('desktop',contain)
+        background-position: 0 -50px
+.container
+    position: relative
+    border-radius: 10px
+    margin: 20vh 8vw
+    background-color: $neutral_Very_pale_blue
+    box-shadow: 0rem .6rem 1.6rem $Desaturated_blue
+    +tablet()
+        margin: 12vh 30vw
+    +laptop()
+        margin: 12vh 32vw
+    +pc()
+        margin: 12vh 38vw
+    >img
+        width: 100%
+        border-radius: 10px 10px 0 0
+    .content
+        padding: 0 1.5rem
+
+        +laptop()
+            padding: 0 1.8rem
+        +pc()
+            padding: 0 1.8rem   
+        &__h1
+            margin: 1.2rem 0
+            font-weight: $wg-9
+        &__p
+            font-size: $paragraph_fontsize 
+            word-break: break-word
+            line-height: $paragraph_fontsize
+            max-width: 100%
+            margin: 1rem 0
+            
+        .price
+            background-color: $neutral_Very_pale_blue
+            border-radius: 10px
+            display: flex
+            align-items: center
+            justify-content: space-between
+            padding: .5rem .5rem
+            +laptop()
+                padding: .8rem 1rem
+            &__icon
+                display: flex
+                align-center: center
+            &__description
+                p>span
+                    font-weight: 900
+            &__changeBtn
+                &:focus,&:visited
+                    color: $primary_Bright_blue
+    .btns
+        display: flex
+        flex-direction: column
+        margin: 2vh 0
+        font-weight: 900
+        width: 100%
+        &__payment
+            padding: 1rem 0
+            border-radius: 10px
+            color: $neutral_Very_pale_blue
+            background-color: $primary_Bright_blue
+            border: none
+            box-shadow: 0rem .2rem .5rem $primary_Bright_blue
+            font-weight: $wg-7
+            font-size: $paragraph_fontsize 
+            cursor: pointer
+        &__cancel
+            padding: 1.2rem 0 
+            a
+                color: $Desaturated_blue
+                text-decoration: none
+                &:focus,&:hover
+                    color: $primary_Pale_blue
+                
+
+            
+            
+
+.attribution
+    margin: 0 auto
+
+        
+        
