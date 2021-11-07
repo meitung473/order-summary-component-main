@@ -22,7 +22,7 @@ body
         +picbg('desktop',contain)
     +pc()
         +picbg('desktop',contain)
-        background-position: 0 -50px
+        // background-position: 0 -50px
 .container
     position: relative
     border-radius: 10px
@@ -48,10 +48,11 @@ body
         &__h1
             margin: 1.2rem 0
             font-weight: $wg-9
+            
         &__p
             font-size: $paragraph_fontsize 
             word-break: break-word
-            line-height: $paragraph_fontsize
+            line-height: 1.5rem
             max-width: 100%
             margin: 1rem 0
             
@@ -70,6 +71,7 @@ body
             &__description
                 p>span
                     font-weight: 900
+                    text-align: left
             &__changeBtn
                 &:focus,&:visited
                     color: $primary_Bright_blue
